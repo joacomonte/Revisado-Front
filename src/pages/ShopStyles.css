@@ -1,0 +1,52 @@
+.shopPage{
+    position: relative;
+    background-color: #FCFCFC;
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+    height: 100%;
+    border-radius: 25px;
+}
+
+
+.backButton{
+    position: absolute;
+    display: flex;
+    gap: 10px;
+    top: 45px;
+    left: 50px;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.shopTitle{
+    font-size: 40px;
+    font-weight: 400;
+
+    margin: 100px;
+    margin-bottom: 50px;
+}
+.productListContainer{
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+    margin-left:  50px;
+    margin-right: 50px;
+    margin-bottom: 200px;
+
+    
+}
+
+.loadingDiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,23 +1,23 @@
 
 import './App.css';
 
-import HomePage from './pages/HomePage';
-
 import  { Routes, Route } from "react-router-dom";
 
-import ShopPage from './pages/ShopPage';
+import Home from "./pages/Home.js"
+import Shop from "./pages/Shop.js"
+import SingleProduct from "./pages/SingleProductPage.js"
 
 
 function App() {
   return (
-    <>
-      <div className="App">
-        <Routes>
-          <Route path='/shop-page' element={<ShopPage/>} />
-          <Route path='/' element={<HomePage/>} />
-        </Routes>
-      </div>
-    </>
+    <div className="allPages">
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/shop" element={<Shop/>} />
+        <Route path="/shop/:productId" element={<SingleProduct/>} />
+      </Routes>
+
+    </div>
   );
 }
 
