@@ -1,6 +1,7 @@
 
 import React, {useEffect, useState} from 'react'
-import axios, { Axios } from 'axios';
+import './ShopStyles.css';
+
 
 import ClockLoader from "react-spinners/ClockLoader";
 import { Link } from "react-router-dom";
@@ -9,9 +10,7 @@ import revisadoLogo from "../images/logo-revisado.png"
 
 import useFetchWithCancel from '../hooks/useFetchWithCancel';
 
-import './ShopStyles.css';
 import Product from "../components/product"
-
 
 
 function Shop() {
