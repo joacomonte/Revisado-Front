@@ -15,18 +15,13 @@ import Product from "../components/product"
 
 function Shop() {
   
-  const url = `https://mocki.io/v1/6bf7b429-39a4-4461-936b-0b6dc856a47a`;
+  // const url = `https://mocki.io/v1/6bf7b429-39a4-4461-936b-0b6dc856a47a`;
+  const url = "http://192.168.0.128:3001/api/products";
 
 
 
   const {data, isLoading,error} = useFetchWithCancel(url);
 
-
-  useEffect(()=>{
-    setTimeout(()=>{
-      setMounted(false)
-    },1000)
-  },[])
 
 
     let productsListDiv = null;
@@ -52,15 +47,16 @@ function Shop() {
 
     if(data)
     {
+      console.log(data)
       productsListDiv = 
       data.map(item=>{
         return(
           <Product
-            key={item.id}
-            title={item.nameToDisplay}
-            price={item.price}
-            productImg={item.productImg}
-            id={item.id}
+            key={item.idProduct}
+            nameToDisplay={item.nameToDisplay}
+            // price={item.price}
+            // productImg={item.productImg}
+            // id={item.id}
           />
         )
       })
