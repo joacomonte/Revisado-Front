@@ -7,7 +7,7 @@ import UsePost from '../hooks/UsePost';
 
 function NewProduct() {
 
-  const url = "http://192.168.0.128:3001/api/products";
+  const url = "https://revisado-back.onrender.com/api/products";
 
   const [startBoolean, setStartBoolean] = useState(false)
 

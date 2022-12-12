@@ -7,8 +7,8 @@ function product(props) {
   return (
     <div className='cardContainer'>
         {/* <img className='temp1' src={require(`../images/${props.productImg}`)}></img> */}
-        <div className='temp2'>{props.nameToDisplay}</div>    
-        {props.price ? <div className='temp3'>{props.price}</div> : <p>no existe esta prop</p> }
+        <div className='temp2'>{props.brand}</div>    
+        {props.modelName ? <div className='temp3'>{props.modelName}</div> : <p>no existe esta prop</p> }
         <Link className='temp4' to={id} style={{textDecoration: 'inherit'}}>    
           <div>Más</div>    
         </Link>   
