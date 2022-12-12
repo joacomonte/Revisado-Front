@@ -57,20 +57,20 @@ function SingleProductPage() {
         <div>
           <div className='topSide'>
 
-            <h1>{info.brand} {info.modelName}</h1>
+            { info.brand && info.modelName ? <h1>{info.brand} {info.modelName}</h1> : <h1>no se encontraron datos</h1>}
             <img className='imgProduct' src={require(`../images/${info.productImg}`)}></img> 
 
           </div>
 
           <div className='bottomSide'>
 
-            <div className='caracts'>
+            {/* <div className='caracts'>
               <h2>Detalles</h2>
               <div>Caracteristicas: {info.caracts}</div>
               <div>Modelo Técnico: {info.modelNumber}</div>
               <div>Color: {info.color}</div>
               <div>Estado: {info.details}</div>
-            </div>
+            </div> */}
             <div className='contactUs'>
               <h2>Comprar</h2>
             </div>
@@ -79,8 +79,7 @@ function SingleProductPage() {
       }
 
   return (
-    <div className='pageContainer'>
-      <div className='pageContent'>
+
         <div className='productPage'> 
 
 
@@ -96,8 +95,7 @@ function SingleProductPage() {
                 {content}
               </div>  
           </div>
-        </div>
-      </div>
+   
     </div>
   )
 }

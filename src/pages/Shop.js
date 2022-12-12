@@ -68,8 +68,7 @@ function Shop() {
 
 
   return (
-    <div className='pageContainer'>
-      <div className='pageContent'>
+
         <div className='shopPage'>
           <div className='shopHeader'>
             <img src={revisadoLogo} alt="logo" width="200" style={{marginTop:"5px"}} />
@@ -87,8 +86,7 @@ function Shop() {
             {productsListDiv}
           </div>
         </div>
-      </div>
-    </div>
+  
 
   )
 }
