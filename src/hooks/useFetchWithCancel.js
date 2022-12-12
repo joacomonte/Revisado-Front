@@ -10,11 +10,8 @@ function useFetchWithCancel(url) {
     useEffect(() => {
       axios.get(url, { cancelToken: source.token })
         .then(response => {
-          // setTimeout(() => {
-            // Delay the execution of this code by 1000ms (1 second)
             setData(response.data);
             setIsLoading(false)
-          // }, 1000);
         })
         .catch(error => {
             setIsLoading(false)

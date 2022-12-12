@@ -58,7 +58,7 @@ function Shop() {
             nameToDisplay={item.nameToDisplay}
             // price={item.price}
             // productImg={item.productImg}
-            // id={item.id}
+            id={item.idProduct}
           />
         )
       })

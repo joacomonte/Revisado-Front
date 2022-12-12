@@ -1,11 +1,11 @@
-import React, {useState, useEffect} from 'react'
+import React from 'react'
 import {useParams} from 'react-router-dom'
 import ClockLoader from "react-spinners/ClockLoader";
-import axios from 'axios';
 import { Link } from "react-router-dom";
 import './SingleProductPageStyles.css';
 import backIcon from '../images/icon-back.svg'
 import revisadoLogo from "../images/logo-revisado.png"
+import useFetchWithCancel from '../hooks/useFetchWithCancel';
 
 
 function SingleProductPage() {
@@ -17,27 +17,17 @@ function SingleProductPage() {
     const url = "https://revisado-back.onrender.com/api/products";
 
 
-    const [products, setProducts] = useState({
-      loading:false, 
-      data:null, 
-      error:false
-    })
-  
-  
-      useEffect(() => {
-        setProducts( {loading:true, data:null,error:false} );
-        setTimeout(()=>{
-          axios.get(url).then(res=>{setProducts({loading:false, data: res.data, error:false})})
-            .catch( () => {setProducts({loading:false, data:null, error:true})})
-        },300)  
-      },[])
+    const {data, isLoading,error} = useFetchWithCancel(url);
+
+
+
   
       let content = null;
   
-      if(products.error){
+      if(error){
         content = <p>error</p>
       }
-      if(products.loading){
+      if(isLoading){
         content =  
         <div className='loadingDiv'>
           <ClockLoader
@@ -51,14 +41,14 @@ function SingleProductPage() {
   
       }
   
-      if(products.data){
-        const info = products.data[productId-1];
+      if(data){
+        const info = data[productId-1];
         content = 
         <div>
           <div className='topSide'>
 
             { info.brand && info.modelName ? <h1>{info.brand} {info.modelName}</h1> : <h1>no se encontraron datos</h1>}
-            <img className='imgProduct' src={require(`../images/${info.productImg}`)}></img> 
+            {/* <img className='imgProduct' src={require(`../images/${info.productImg}`)}></img>  */}
 
           </div>
 
@@ -101,3 +91,21 @@ function SingleProductPage() {
 }
 
 export default SingleProductPage
+
+
+
+
+    // const [products, setProducts] = useState({
+    //   loading:false, 
+    //   data:null, 
+    //   error:false
+    // })
+  
+  
+    //   useEffect(() => {
+    //     setProducts( {loading:true, data:null,error:false} );
+    //     setTimeout(()=>{
+    //       axios.get(url).then(res=>{setProducts({loading:false, data: res.data, error:false})})
+    //         .catch( () => {setProducts({loading:false, data:null, error:true})})
+    //     },300)  
+    //   },[])
