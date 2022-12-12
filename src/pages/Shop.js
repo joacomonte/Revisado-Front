@@ -56,9 +56,10 @@ function Shop() {
           <Product
             key={item.idProduct}
             nameToDisplay={item.nameToDisplay}
+            id={item.idProduct}
             // price={item.price}
             // productImg={item.productImg}
-            id={item.idProduct}
+
           />
         )
       })
