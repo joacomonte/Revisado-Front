@@ -77,6 +77,9 @@ function Shop() {
               <img src={backIcon} alt="back" width="20"></img>
               <p>Volver</p>
             </Link>
+            <Link className='newProductButton' to="/shop/new-product" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+              <p>New Product</p>
+            </Link>
           </div>
 
           <div className='shopTitle'>
