@@ -2,7 +2,7 @@ import React from 'react'
 import {useParams} from 'react-router-dom'
 import ClockLoader from "react-spinners/ClockLoader";
 import { Link } from "react-router-dom";
-import './SingleProductPageStyles.css';
+import './SingleProductPage.css';
 import backIcon from '../images/icon-back.svg'
 import revisadoLogo from "../images/logo-revisado.png"
 import useFetchWithCancel from '../hooks/useFetchWithCancel';
@@ -92,20 +92,3 @@ function SingleProductPage() {
 
 export default SingleProductPage
 
-
-
-
-    // const [products, setProducts] = useState({
-    //   loading:false, 
-    //   data:null, 
-    //   error:false
-    // })
-  
-  
-    //   useEffect(() => {
-    //     setProducts( {loading:true, data:null,error:false} );
-    //     setTimeout(()=>{
-    //       axios.get(url).then(res=>{setProducts({loading:false, data: res.data, error:false})})
-    //         .catch( () => {setProducts({loading:false, data:null, error:true})})
-    //     },300)  
-    //   },[])

@@ -6,6 +6,7 @@ import App from './App';
 
 
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <BrowserRouter>
@@ -15,15 +16,3 @@ root.render(
     </BrowserRouter>
 
 );
-
-{/* <Provider store={store}>
-</Provider>
-import {configureStore} from '@reduxjs/toolkit'
-import {Provider} from 'react-redux' */}
-
-
-// const store = configureStore(
-//     {
-//         reducer:{}
-//     }
-// )

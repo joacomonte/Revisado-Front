@@ -1,5 +1,5 @@
 import React from 'react'
-import './HomeStyles.css'
+import './Home.css'
 import { Link } from "react-router-dom";
 
 import revisadoLogo from "../images/logo-revisado.png"
@@ -21,7 +21,11 @@ function home() {
 
 
                 <button className='navBarButtons'>Vender</button>
-                <button className='loginButton'>Login</button>
+                <Link to="/login" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                    <button className='loginButton'>Login</button>
+                </Link>   
+
+
             </div>
         </div>
         <div className='Hero'>

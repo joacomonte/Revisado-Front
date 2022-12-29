@@ -1,0 +1,170 @@
+.form{
+    height: 100%;
+}
+.form > textarea{
+    height: 100%;
+    width: 100%;
+    background-color: rgb(59, 59, 59);
+}
+.form > ::placeholder{
+    color: rgb(99, 99, 99);
+}
+
+
+.opinionBox{
+    padding-top: 20px;
+    height: 110px;
+    width: 100%;
+}
+
+.tempForm{
+    margin-top: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+
+}
+
+input {
+    all: unset;
+  }
+
+  
+.cardContainer2 > * {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+}
+
+.cardContainer2{
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+    width: 300px;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 5px;
+
+    background-color: #ffffff;
+
+
+    border-radius: 25px;
+    box-shadow: 3px 5px 16px 7px rgba(0,0,0,0.07);
+    -webkit-box-shadow: 3px 5px 16px 7px rgba(0,0,0,0.07);
+    -moz-box-shadow: 3px 5px 16px 7px rgba(0,0,0,0.07);
+
+}
+
+.user{
+    color: grey;
+    padding-bottom: 10px;
+}
+
+
+.form-img-div{
+    height: 220px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: grey;
+}
+.formIMG{
+    height: 70%;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.brand-error{
+    font-size: 25px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+    color:red;
+}
+
+.errorField{
+    color: red;
+}
+
+.brand{
+    font-size: 20px;
+    display: flex;
+    text-align: center;
+    width: 100%;
+}
+.modelName{
+    display: flex;
+    text-align: center;
+    font-size: 30px;
+    width: 100%;
+}
+.price{
+    display: flex;
+    text-align: center;
+    font-size: 35px;
+    width: 100%;
+    color:#15b975;
+    margin-bottom: 10px;
+}
+
+.masButton{
+    font-size: 20px;
+    color: white;
+    font-weight: 700;
+    background: linear-gradient(145deg, #19dc8b, #15b975);  
+    height: 40px;
+    width: 150px;
+    border-radius: 30px;
+}
+.masButton:hover{
+    background: linear-gradient(20deg, #19dc8b, #10955d);  
+}
+
+
+.caracts2{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  
+    max-width: 400px;
+    width: 85%;
+    min-height: 100px;
+    height: auto;
+
+  
+    margin: 30px 0;
+    padding: 20px;
+  
+    background-color: #FCFCFC;
+    border-radius: 25px;
+    box-shadow:         4px 0px 15px 0px rgba(0,0,0,0.20);
+    -webkit-box-shadow: 4px 0px 15px 0px rgba(0,0,0,0.20);
+    -moz-box-shadow:    4px 0px 15px 0px rgba(0,0,0,0.20);
+  }
+
+
+.caracts2 .textarea{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    resize: none;
+    outline: none;
+    border: none;
+
+
+    background-color: #FCFCFC;
+    width: 100%;
+    min-height: 100px;
+    font-size: 17px;
+
+}

@@ -1,35 +1,19 @@
 .shopPage{
-    position: relative;
+
     background-color: #FCFCFC;
     display: flex;
+
+    /* alinea verticalmente */
     flex-direction: column;
-    padding-top: 50px;
-    align-items: center;
+    align-items: center; 
+
+
     width: 100%;
     min-height: 100vh;
-    height: 100%;
     border-radius: 25px;
 }
 
 
-.backButton{
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    top: 45px;
-    left: 50px;
-    font-size: 20px;
-    font-weight: 500;
-}
-.newProductButton{
-    position: absolute;
-    display: flex;
-    gap: 10px;
-    top: 45px;
-    right: 50px;
-    font-size: 20px;
-    font-weight: 500;
-}
 
 .shopTitle{
     font-size: 40px;
@@ -38,6 +22,8 @@
     margin: 100px;
     margin-bottom: 50px;
 }
+
+
 .productListContainer{
 
     display: flex;

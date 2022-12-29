@@ -16,7 +16,7 @@ function useFetchWithCancel(url) {
         .catch(error => {
             setIsLoading(false)
             if (!axios.isCancel(error)) {
-              console.log("has been an error"+error);
+              console.log("Axios dió este error: "+error);
               setError("error"+error);
             }
         })

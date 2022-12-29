@@ -1,6 +1,6 @@
 
 import React from 'react'
-import './ShopStyles.css';
+import './Shop.css';
 
 
 import ClockLoader from "react-spinners/ClockLoader";
@@ -16,8 +16,8 @@ import Product from "../components/product"
 function Shop() {
   
   // const url = `https://mocki.io/v1/6bf7b429-39a4-4461-936b-0b6dc856a47a`;
-  const url = `https://revisado-back.onrender.com/api/products`;
-  // const url = "http://192.168.0.128:3001/api/products";
+  // const url = `https://revisado-back.onrender.com/api/products`;
+  const url = "http://192.168.0.128:3001/api/products";
 
 
 
@@ -30,7 +30,7 @@ function Shop() {
 
     if(error)
     {
-      productsListDiv = <p>{error}</p>
+      productsListDiv = <p>Hubo un error al comunicarse con el servidor</p>
     }
 
     if(isLoading)
@@ -70,29 +70,31 @@ function Shop() {
 
 
   return (
+  <div className='shopPage'>
 
-        <div className='shopPage'>
-          <div className='shopHeader'>
-            <img src={revisadoLogo} alt="logo" width="200" style={{marginTop:"5px"}} />
-            <Link className='backButton' to="/" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-              <img src={backIcon} alt="back" width="20"></img>
-              <p>Volver</p>
-            </Link>
-            <Link className='newProductButton' to="/shop/new-product" style={{ color: 'inherit', textDecoration: 'inherit'}}>
-              <p>New Product</p>
-            </Link>
-          </div>
+    <div className='shopHeader'>
 
-          <div className='shopTitle'>
-            Productos disponibles
-          </div>
+      <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        <img className='back-icon' src={backIcon} alt="back" width="20"></img>
+        <div>Volver</div>
+      </Link>
 
-          <div className='productListContainer'>
-            {productsListDiv}
-          </div>
-        </div>
-  
+      <img className='revisado-header' src={revisadoLogo} alt="logo" />
+      
+      <Link className='newProductButton' to="/shop/new-product" style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        <div>New Product</div>
+      </Link>
+    </div>
 
+    <div className='shopTitle'>
+      Productos disponibles
+    </div>
+
+    <div className='productListContainer'>
+      {productsListDiv}
+    </div>
+
+  </div>
   )
 }
 
