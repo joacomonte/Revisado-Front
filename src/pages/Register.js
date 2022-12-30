@@ -4,7 +4,6 @@ import revisadoLogo from "../images/logo-revisado.png"
 
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
-import { Link } from "react-router-dom";
 
 import UsePost from '../hooks/UsePost';
 
@@ -18,15 +17,14 @@ const yupSchema = Yup.object().shape(
     {
         name: Yup.string().min(3).required("Marca: minimo 3 caracteres"),
         email: Yup.string().min(1).required("minimo 4 caracteres"),
-        password: Yup.string()
     }
 )
 
 
 const url = "https://revisado-back.onrender.com/api/auth/register";
 
-const [formikData, setFormikData] = useState(null);
-const {response, error, fetchData} = UsePost(url,formikData);
+
+const {response, error, fetchData} = UsePost(url);
 
 
 const formik = useFormik({
@@ -34,16 +32,19 @@ const formik = useFormik({
     {
       name:"",
       email:"",
-      password:'',
+      password:"",
     },
+
     validationSchema: yupSchema,
+
     onSubmit: values => {
-      alert(JSON.stringify(values, null, 2))
-      setFormikData(values);
-      fetchData();
+        console.log('los values del form son: ',values)
+        fetchData(values);
     },
-}
-)
+})
+
+
+
 
   return (
     <>
