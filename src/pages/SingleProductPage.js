@@ -42,7 +42,7 @@ function SingleProductPage() {
       }
   
       if(data){
-        const info = data[productId-1];
+        const info = data;
         content = 
         <div>
           <div className='topSide'>
