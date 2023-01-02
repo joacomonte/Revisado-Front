@@ -57,7 +57,7 @@ function Shop() {
           <Product
             key={item.idProduct}
             brand={item.brand}
-            id={item.idProduct}
+            id={item._id}
             modelName={item.modelName}
             // price={item.price}
             // productImg={item.productImg}
