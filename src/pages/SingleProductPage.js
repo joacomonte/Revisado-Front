@@ -1,11 +1,15 @@
 import React from 'react'
 import {useParams} from 'react-router-dom'
 import ClockLoader from "react-spinners/ClockLoader";
-import { Link } from "react-router-dom";
+
 import './SingleProductPage.css';
 import backIcon from '../images/icon-back.svg'
-import revisadoLogo from "../images/logo-revisado.png"
+
 import useFetchWithCancel from '../hooks/useFetchWithCancel';
+
+import { Link } from "react-router-dom";
+import revisadoLogo from "../images/logo-revisado.png"
+import backIcon from '../images/icon-back.svg'
 
 
 function SingleProductPage() {
@@ -72,13 +76,15 @@ function SingleProductPage() {
 
         <div className='productPage'> 
 
-
-        <img src={revisadoLogo} alt="logo" width="200" style={{marginTop:"5px"}} />
-              
-              <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                <img src={backIcon} alt="back" width="20"></img>
-                <p>Volver</p>
-              </Link>
+          <div className='shopHeader'>  
+            <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+                <img className='back-icon' src={backIcon} alt="back" width="20"></img>
+                <div>Volver</div>
+            </Link>
+            <Link to={'/'}>
+                <img className='revisado-header' src={revisadoLogo} alt="logo" />
+            </Link>
+          </div>
 
           <div className='productMainSection'>
               <div>
