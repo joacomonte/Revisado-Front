@@ -49,9 +49,10 @@ function Shop() {
 
     if(data)
     {
+      productList = data.products
       console.log(data.products)
       productsListDiv = 
-      data.map(item=>{
+      productList.map(item=>{
         return(
           <Product
             key={item.idProduct}
