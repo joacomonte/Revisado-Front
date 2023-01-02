@@ -20,7 +20,7 @@ import UsePost from '../hooks/UsePost';
 
 function NewProduct() {
 
-  const url = "https://revisado-back.onrender.com/api/products/all";
+  const url = "https://revisado-back.onrender.com/api/products/";
   // const url = "http://192.168.0.128:3001/api/products";
 
   const [img, setImg] = useState(imageUpload)
