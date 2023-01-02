@@ -14,7 +14,7 @@ function SingleProductPage() {
 
     // const url = `https://mocki.io/v1/6bf7b429-39a4-4461-936b-0b6dc856a47a`;
     // const url = "http://192.168.0.128:3001/api/products";
-    const url = "https://revisado-back.onrender.com/api/products";
+    const url = `https://revisado-back.onrender.com/api/products/all/${productId}`;
 
 
     const {data, isLoading,error} = useFetchWithCancel(url);
