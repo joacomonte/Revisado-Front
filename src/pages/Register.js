@@ -1,4 +1,4 @@
-import React,{useState} from 'react'
+import React,{useEffect} from 'react'
 import './Register.css';
 import revisadoLogo from "../images/logo-revisado.png"
 
@@ -7,54 +7,76 @@ import * as Yup from 'yup';
 
 import UsePost from '../hooks/UsePost';
 
+import { Link } from "react-router-dom";
+import backIcon from '../images/icon-back.svg'
+
+import {useNavigate} from 'react-router-dom'
+
+import './Shop.css';
+
 
 
 
 
 function Register() {
 
-const yupSchema = Yup.object().shape(
-    {
-        name: Yup.string().min(3).required("Marca: minimo 3 caracteres"),
-        email: Yup.string().min(1).required("minimo 4 caracteres"),
-    }
-)
+    let navigate = useNavigate();
+
+    const yupSchema = Yup.object().shape(
+        {
+            name: Yup.string().min(3).required("Marca: minimo 3 caracteres"),
+            email: Yup.string().min(1).required("minimo 4 caracteres"),
+        }
+    )
 
 
-const url = "https://revisado-back.onrender.com/api/auth/register";
+    const url = "https://revisado-back.onrender.com/api/auth/register";
 
 
-const {response, error, fetchData} = UsePost(url);
+    const {response, error, fetchData} = UsePost(url);
 
 
-const formik = useFormik({
-    initialValues:
-    {
-      name:"",
-      email:"",
-      password:"",
-    },
+    const formik = useFormik({
+        initialValues:
+        {
+        name:"",
+        email:"",
+        password:"",
+        },
 
-    validationSchema: yupSchema,
+        validationSchema: yupSchema,
 
-    onSubmit: values => {
-        console.log('los values del form son: ',values)
-        fetchData(values);
-    },
-})
+        onSubmit: values => {
+            console.log('los values del form son: ',values)
+            fetchData(values);
+            }
+        })
 
+        useEffect(() => {
+            if(response){
+                alert('usuario creado exitosamente')
+                navigate('/login')}
+        }, [response])
+        
 
 
 
   return (
     <>
 
-            <div className="flex flex-col items-center min-h-screen pt-6 sm:justify-center sm:pt-0 bg-gray-50">
-              <div>
-                  <a href="/">
-                  <img src={revisadoLogo} alt="logo" width="200"  />
-                  </a>
-              </div>
+    <div className='shopHeader'>  
+        <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+            <img className='back-icon' src={backIcon} alt="back" width="20"></img>
+            <div>Volver</div>
+        </Link>
+        <Link to={'/'}>
+            <img className='revisado-header' src={revisadoLogo} alt="logo" />
+        </Link>
+    </div>
+
+ 
+
+            <div className="flex flex-col items-center sm:justify-center sm:pt-10 bg-gray-50">
                 <div className="w-full px-6 py-4 mt-6 overflow-hidden bg-white shadow-md sm:max-w-lg sm:rounded-lg">
                     <form onSubmit={formik.handleSubmit}>
                         <div>

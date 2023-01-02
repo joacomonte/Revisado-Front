@@ -70,21 +70,23 @@ function Shop() {
 
 
   return (
-  <div className='shopPage'>
-
-    <div className='shopHeader'>
-
+  <>
+    <div className='shopHeader'>  
       <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
         <img className='back-icon' src={backIcon} alt="back" width="20"></img>
         <div>Volver</div>
       </Link>
+      <Link to={'/'}>
+        <img className='revisado-header' src={revisadoLogo} alt="logo" />
+      </Link>
 
-      <img className='revisado-header' src={revisadoLogo} alt="logo" />
-      
       <Link className='newProductButton' to="/shop/new-product" style={{ color: 'inherit', textDecoration: 'inherit'}}>
         <div>New Product</div>
       </Link>
     </div>
+      
+
+
 
     <div className='shopTitle'>
       Productos disponibles
@@ -94,7 +96,7 @@ function Shop() {
       {productsListDiv}
     </div>
 
-  </div>
+  </>
   )
 }
 

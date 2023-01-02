@@ -14,7 +14,7 @@ function UsePost(url)
             console.log(values)
             const res = await axios.post(url,values)
             setRespose(res.data)
-            console.log('la respuesta fue: ',response)
+            console.log('la respuesta fue: ',res.data)
         } 
         catch (err){
             setError(err)
