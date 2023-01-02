@@ -20,15 +20,14 @@ function Login() {
   const url = "https://revisado-back.onrender.com/api/auth/register";
 
   let navigate = useNavigate();
-
  
-
   // const yupSchema = Yup.object().shape(
   //   {
   //       name: Yup.string().min(3).required("Marca: minimo 3 caracteres"),
   //       email: Yup.string().min(1).required("minimo 4 caracteres"),
   //   }
   // )
+
 
   const formik = useFormik({
     initialValues:

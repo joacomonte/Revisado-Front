@@ -49,7 +49,7 @@ function Shop() {
 
     if(data)
     {
-      console.log(data)
+      console.log(data.products)
       productsListDiv = 
       data.map(item=>{
         return(
