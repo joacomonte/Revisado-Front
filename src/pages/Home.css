@@ -1,9 +1,15 @@
-
+.revisado-home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
 
 .homeHeader{
     display: flex;
+
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
@@ -14,13 +20,41 @@
     font-weight: 700;
 }
 
+.revisado-home{
+    width: 200px;
+}
+@media (max-width: 1030px){
+    .homeHeader{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    
+        width: 100%;
+        gap: 35px;
+
+
+        padding: 10px;
+        font-weight: 700;
+    }
+
+    .revisado-home{
+        width: 30vw;
+    }
+}
+
+
+
 .headerButtonsWrapper{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     text-align: center;
+
+    flex-basis: 600px;
     width: 100%;
-    gap: 10px;
+    gap: 50px;
     vertical-align: middle;
 }
 

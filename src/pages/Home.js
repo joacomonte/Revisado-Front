@@ -11,20 +11,26 @@ function home() {
     return (
     <>
         <div className='homeHeader'>
-            <img src={revisadoLogo} alt="logo" width="200"  />
+
+
+        <div className='revisado-home'>
+                    <img src={revisadoLogo} alt="logo"   />
+            </div>
+
             <div className='headerButtonsWrapper'>   
                 <Link to="/shop" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                     <button className='navBarButtons'>Shop</button>
                 </Link>             
                 <button className='navBarButtons'>Nosotros</button>
 
-
-
                 <button className='navBarButtons'>Vender</button>
                 <Link to="/login" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                     <button className='loginButton'>Login</button>
                 </Link>   
             </div>
+
+
+
         </div>
 
 
