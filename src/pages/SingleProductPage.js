@@ -9,7 +9,7 @@ import useFetchWithCancel from '../hooks/useFetchWithCancel';
 
 import { Link } from "react-router-dom";
 import revisadoLogo from "../images/logo-revisado.png"
-import backIcon from '../images/icon-back.svg'
+
 
 
 function SingleProductPage() {
@@ -32,7 +32,7 @@ function SingleProductPage() {
         content = <p>error</p>
       }
       if(isLoading){
-        content =  
+        content =  <>
         <div className='loadingDiv'>
           <ClockLoader
             color={"#17CE82"}
@@ -42,6 +42,8 @@ function SingleProductPage() {
           />
           <h1 style={{color:"#17CE82", paddingLeft:"15px"}}>Loading...</h1>
         </div>
+        <p>Debido a que nuestro Servido es gratuito es comun una espera de varios segundos</p>
+        </>
   
       }
   
@@ -50,21 +52,10 @@ function SingleProductPage() {
         content = 
         <div>
           <div className='topSide'>
-
             { info.brand && info.modelName ? <h1>{info.brand} {info.modelName}</h1> : <h1>no se encontraron datos</h1>}
-            {/* <img className='imgProduct' src={require(`../images/${info.productImg}`)}></img>  */}
-
           </div>
 
           <div className='bottomSide'>
-
-            {/* <div className='caracts'>
-              <h2>Detalles</h2>
-              <div>Caracteristicas: {info.caracts}</div>
-              <div>Modelo Técnico: {info.modelNumber}</div>
-              <div>Color: {info.color}</div>
-              <div>Estado: {info.details}</div>
-            </div> */}
             <div className='contactUs'>
               <h2>Comprar</h2>
             </div>
@@ -73,26 +64,22 @@ function SingleProductPage() {
       }
 
   return (
-
-        <div className='productPage'> 
-
-          <div className='shopHeader'>  
-            <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
-                <img className='back-icon' src={backIcon} alt="back" width="20"></img>
-                <div>Volver</div>
-            </Link>
-            <Link to={'/'}>
-                <img className='revisado-header' src={revisadoLogo} alt="logo" />
-            </Link>
-          </div>
-
-          <div className='productMainSection'>
-              <div>
-                {content}
-              </div>  
-          </div>
-   
+  <>
+    <div className='shopHeader'>  
+      <Link className='backButton' to={-1} style={{ color: 'inherit', textDecoration: 'inherit'}}>
+        <img className='back-icon' src={backIcon} alt="back" width="20"></img>
+        <div>Volver</div>
+      </Link>
+      <Link to={'/'}>
+        <img className='revisado-header' src={revisadoLogo} alt="logo" />
+      </Link>
     </div>
+    <div className='productMainSection'>
+        <div>
+          {content}
+        </div>  
+    </div>
+  </>
   )
 }
 

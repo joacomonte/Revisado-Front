@@ -2,26 +2,26 @@
 
 .homeHeader{
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
     text-align: center;
 
-    width: 90%;
-    height: 70px;
+    width: 100%;
+    gap: 35px;
 
-    margin-top: 15px;
+    padding: 25px;
     font-weight: 700;
 }
 
 .headerButtonsWrapper{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center;
     text-align: center;
+    width: 100%;
+    gap: 10px;
     vertical-align: middle;
-    gap: 15px;
-    width: 60%;
-    margin-top: 10px;
 }
 
 
@@ -33,39 +33,49 @@ button{
     text-decoration: none !important;
     color: inherit;
 }
+
 .loginButton{
-    font-size: 20px;
+    font-size: 1rem;
     color: white;
     font-weight: 700;
     background-color: #17CE82;
-    height: 45px;
-    width: 150px;
+    padding: 10px 30px;
     border-radius: 30px;
 }
 
 .navBarButtons{
-    font-size: 20px;
+    /* min - val - max */
+    font-size: clamp(1rem, 3vw, 1.5rem);
 }
 
 .Hero{
-    width: 90%;
-    padding: 150px;
+
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    padding: 150px 50px;
 }
+
 .heroLeft{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 
+    width: 100%;
     font-weight: 400;
-    font-size: clamp(20px, 3.5vw, 45px);
+    font-size: clamp(25px, 3.5vw, 45px);
     
 }
 .heroImg{
-    /* max-width: 100%; */
-    width: 50%;
-    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vw;
+    max-height: 400px;
+    min-height: 100px;
+    aspect-ratio: 1/1;
 }

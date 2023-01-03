@@ -1,6 +1,6 @@
 import React,{useEffect} from 'react'
 import './Register.css';
-import revisadoLogo from "../images/logo-revisado.png"
+
 
 import {useFormik} from 'formik';
 import * as Yup from 'yup';
@@ -8,6 +8,7 @@ import * as Yup from 'yup';
 import UsePost from '../hooks/UsePost';
 
 import { Link } from "react-router-dom";
+import revisadoLogo from "../images/logo-revisado.png"
 import backIcon from '../images/icon-back.svg'
 
 import {useNavigate} from 'react-router-dom'

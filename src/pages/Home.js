@@ -8,7 +8,7 @@ import separator1 from "../images/Separator1.svg"
 
 
 function home() {
-  return (
+    return (
     <>
         <div className='homeHeader'>
             <img src={revisadoLogo} alt="logo" width="200"  />
@@ -24,16 +24,19 @@ function home() {
                 <Link to="/login" style={{ color: 'inherit', textDecoration: 'inherit'}}>
                     <button className='loginButton'>Login</button>
                 </Link>   
-
-
             </div>
         </div>
+
+
         <div className='Hero'>
             <div className='heroLeft'> 
                 <div className='sub1'> Compra con <mark style={{fontWeight:700, background:'none'}}>confianza.</mark></div>
                 <div className='sub2'> Vende <mark style={{fontWeight:700, background:'none'}}>sin esfuerzo</mark></div>
             </div>
-            <img src={heroImg} alt="heroimg" className='heroImg'/>
+            <div className='heroImg'>
+                <img src={heroImg} alt="heroimg" />
+            </div>
+
         </div>
 
         <img src={separator1} alt="separator" className='separator1'/>

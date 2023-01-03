@@ -36,16 +36,20 @@ function Shop() {
     if(isLoading)
     {
       productsListDiv =  
-      <div className='loadingDiv'>
-        <ClockLoader
-          color={"#17CE82"}
-          size={80}
-          aria-label="Loading Spinner"
-          data-testid="loader"
-        />
-        <h1 style={{color:"#17CE82", paddingLeft:"15px"}}>Loading...</h1>
-      </div>
+      <>
+        <div className='loadingDiv'>
+          <ClockLoader
+            color={"#17CE82"}
+            size={80}
+            aria-label="Loading Spinner"
+            data-testid="loader"
+          />
+          <h1 style={{color:"#17CE82", paddingLeft:"15px"}}>Loading...</h1>
+        </div>
+        <p>Debido a que nuestro servido es gratuito, es comun una espera de varios segundos</p>
+      </>
     }
+
 
     if(data)
     {
@@ -59,9 +63,8 @@ function Shop() {
             brand={item.brand}
             id={item._id}
             modelName={item.modelName}
-            // price={item.price}
+            price={item.price}
             // productImg={item.productImg}
-
           />
         )
       })

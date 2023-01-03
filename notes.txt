@@ -1,0 +1,12 @@
+
+_id: ObjectId('63b325c35d14058e675ee98d')
+idProduct: 21
+brand: "apple"
+modelName: "iphone"
+modelNumber: "B1245"
+caracts: "500GB - 16GB RAM"
+nameToDisplay: "Playstation 4 Fat Edition"
+price: 100
+color: "black"
+details: "Bueno"
+publishBy: ObjectId('63b3256a5d14058e675ee984

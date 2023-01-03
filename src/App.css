@@ -14,19 +14,26 @@
   padding-bottom: 50px;
 
 }
+
+
 .pageContent{
-  min-height: 90vh;
-  height: auto;
-  max-width: 1200px;
-  width: 90vw;
-
-  margin-top: 30px;
-  padding-bottom: 25px;
-
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+
+  min-height: 90vh;
+  height: auto;
+  
+  max-width: 1200px;
+  width: 90vw;
+
+  margin-top: 30px;
+  padding: 20px;
+
+  
+
+
 
   background-color: #FCFCFC;
 

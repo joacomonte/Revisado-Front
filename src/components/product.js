@@ -4,12 +4,21 @@ import { Link } from "react-router-dom";
 
 function product(props) {
   const id = `/shop/${props.id}`
+
+
+
   return (
     <div className='cardContainer'>
-        {/* <img className='temp1' src={require(`../images/${props.productImg}`)}></img> */}
-        <div className='temp2'>{props.brand}</div>    
-        {props.modelName ? <div className='temp3'>{props.modelName}</div> : <p>no existe esta prop</p> }
-        <Link className='temp4' to={id} style={{textDecoration: 'inherit'}}>    
+        {props.seller ? <div>{props.seller}</div> : <div style={{color:"grey"}} >Vendedor: Montech</div>}
+        {props.img ? <div>{props.img}</div> : <img className='card-img' src={require(`../images/bottle-black.png`)}></img>}
+        {props.brand ? <div className='card-brand'>{props.brand}</div> :  <div className='temp2'>No Prop</div>}
+        {props.modelName ? <div className='card-modelName'>{props.modelName}</div> : <div>No Prop</div> }
+        {props.price ? <div className='card-price'>${props.price}</div> : <div>No tiene precio</div>}
+        {props.caracts? <div>{props.caracts}</div> :''}
+        {props.color ? <div>{props.color}</div> : ''}
+
+
+        <Link className='button1-revisado' to={id} style={{textDecoration: 'inherit'}}>    
           <div>Más</div>    
         </Link>   
     </div>

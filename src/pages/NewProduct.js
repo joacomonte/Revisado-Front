@@ -92,6 +92,7 @@ function NewProduct() {
       <form className='tempForm'onSubmit={formik.handleSubmit} >
         <h1>Vendé tu producto</h1>
         <h3>Preview de la publicación</h3>
+        
         <div className='cardContainer2'>
           <div className='user'> Vendedor: joacomonte94</div>
           <div className='form-img-div' >
