@@ -34,8 +34,6 @@
         width: 100%;
         gap: 35px;
 
-
-        padding: 10px;
         font-weight: 700;
     }
 
@@ -48,13 +46,13 @@
 
 .headerButtonsWrapper{
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     text-align: center;
 
     flex-basis: 600px;
     width: 100%;
-    gap: 50px;
+
     vertical-align: middle;
 }
 
@@ -69,11 +67,11 @@ button{
 }
 
 .loginButton{
-    font-size: 1rem;
+    font-size: clamp(1rem, 3vw, 1.5rem);
     color: white;
     font-weight: 700;
     background-color: #17CE82;
-    padding: 10px 30px;
+    padding: 7px 30px;
     border-radius: 30px;
 }
 

@@ -11,10 +11,8 @@ function home() {
     return (
     <>
         <div className='homeHeader'>
-
-
-        <div className='revisado-home'>
-                    <img src={revisadoLogo} alt="logo"   />
+            <div className='revisado-home'>
+                <img src={revisadoLogo} alt="logo"   />
             </div>
 
             <div className='headerButtonsWrapper'>   
@@ -28,9 +26,6 @@ function home() {
                     <button className='loginButton'>Login</button>
                 </Link>   
             </div>
-
-
-
         </div>
 
 

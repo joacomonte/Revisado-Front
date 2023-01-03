@@ -1,18 +1,18 @@
 .shopPage{
 
-    background-color: #FCFCFC;
+
     display: flex;
 
     /* alinea verticalmente */
     flex-direction: column;
     align-items: center; 
 
+    background-color: #FCFCFC;
 
     width: 100%;
     min-height: 100vh;
     border-radius: 25px;
 }
-
 
 
 .shopTitle{
