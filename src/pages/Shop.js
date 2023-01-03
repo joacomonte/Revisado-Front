@@ -80,8 +80,11 @@ function Shop() {
         <img className='back-icon' src={backIcon} alt="back" width="20"></img>
         <div>Volver</div>
       </Link>
+  
       <Link to={'/'}>
-        <img className='revisado-header' src={revisadoLogo} alt="logo" />
+        <div className='revisado-header'>
+          <img src={revisadoLogo} alt="logo" />
+        </div>
       </Link>
 
       <Link className='newProductButton' to="/shop/new-product" style={{ color: 'inherit', textDecoration: 'inherit'}}>

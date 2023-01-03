@@ -47,36 +47,39 @@
 
 
 .shopHeader{
-  position: relative;
-  width: 90%;
-  padding: 50px 0px;
-  /* background-color: rgba(255, 0, 0, 0.085); */
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   text-align: center;
+  justify-content: space-between;
+
+  position: relative;
+  width: 100%;
+  padding: 30px 20px;
+  /* background-color: rgba(255, 0, 0, 0.085); */
+
 }
 
 
 .backButton{
-  position:absolute;
-  left: 0; 
-  top: 54px;
   display: flex;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 500;
-
   align-items: center;
+
+  left: 0; 
+
+
+  gap: 10px;
+  font-size: clamp(15px, 2.5vw, 25px);
+  font-weight: 600;
+
+
 }
 
 .newProductButton{
-  position:absolute;
+  display: flex;
+  align-items: center;
   right: 0; 
-  top: 54px;
-
-  font-size: 20px;
-  font-weight: 500;
+  font-size: clamp(15px, 2.5vw, 25px);
+  font-weight: 600;
+  align-items: center;
 }
 
 .revisado-header{
